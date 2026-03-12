@@ -150,6 +150,7 @@ export default function TaskRabbitAI() {
     const style = document.createElement("style");
     style.textContent = `
       @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+      html, body, #root { margin: 0; padding: 0; height: 100dvh; overflow: hidden; }
       @keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
       @keyframes fadeSlideIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
       @keyframes slideUp { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
@@ -241,7 +242,7 @@ export default function TaskRabbitAI() {
     : waitingForUser ? "Edit if you want, then press Send..." : started ? "Waiting for assistant..." : "Press Send to start";
 
   return (
-    <div style={{ fontFamily: "'DM Sans', sans-serif", minHeight: "100vh", background: "#F9FAFB", display: "flex", flexDirection: "column" }}>
+    <div style={{ fontFamily: "'DM Sans', sans-serif", height: "100dvh", background: "#F9FAFB", display: "flex", flexDirection: "column", overflow: "hidden" }}>
 
       {/* Header */}
       <div style={{ background: TR_TEAL, padding: "14px 20px", display: "flex", alignItems: "center", gap: 10, boxShadow: "0 2px 12px rgba(74,155,127,0.3)" }}>
